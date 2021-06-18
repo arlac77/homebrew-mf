@@ -8,13 +8,10 @@ class Shaderc < Formula
 
   bottle :unneeded
 
-  #bottle do
-  #  sha256 cellar: :any, arm64_big_sur: "dd6e09db88a5d8a1317ea461fafe7e6e3e92e0ef4885c2e8a6a70a1a44d00a91"
-  #end
-
   def install
     bin.install Dir["bin/*"]
-    doc.install Dir["docs/*"]
+    include.install Dir["include/*"]
+    lib.install Dir["lib/*"]
   end
 
   test do
